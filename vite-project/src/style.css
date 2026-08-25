@@ -249,6 +249,11 @@ Body {
         overflow-x: hidden;
     }
 
+    .header,
+    .footer-container {
+        display: none;
+    }
+
     .header {
         height: 32px;
         margin-bottom: 12px;
