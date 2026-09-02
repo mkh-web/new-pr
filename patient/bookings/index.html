@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إدارة الحجوزات الحالية</title>
+    <link rel="stylesheet" href="../assets/patient.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة المريض</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المريض</div>
+          <a class="nav-link" href="../index.html"><span>العيادات</span><span class="count">01</span></a>
+          <a class="nav-link active" href="index.html"><span>إدارة الحجوزات الحالية</span><span class="count">02</span></a>
+          <a class="nav-link" href="../profile/index.html"><span>إدارة الملف الشخصي</span><span class="count">03</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>الحجوزات</p>
+            <h1>إدارة الحجوزات الحالية</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">م</div>
+            <div>
+              <strong>محمد علي</strong>
+              <small>مريض</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="section-stack">
+          <article class="panel">
+            <div class="panel-header">
+              <h2>الحجوزات الحالية</h2>
+              <span class="badge success">2 مواعيد</span>
+            </div>
+
+            <div class="booking-card">
+              <div class="booking-meta">
+                <div>
+                  <strong>عيادة النور</strong>
+                  <small>الأسنان • يوم الأحد • 14:00</small>
+                </div>
+                <span class="status-pill warning">قيد التنفيذ</span>
+              </div>
+
+              <div class="booking-actions">
+                <button type="button" class="secondary-btn" data-cancel>إلغاء</button>
+                <button type="button" class="ghost-btn">إعادة جدولة</button>
+              </div>
+            </div>
+
+            <div class="booking-card">
+              <div class="booking-meta">
+                <div>
+                  <strong>عيادة الأمل</strong>
+                  <small>الجلدية • يوم الثلاثاء • 10:30</small>
+                </div>
+                <span class="status-pill success">مؤكدة</span>
+              </div>
+
+              <div class="booking-actions">
+                <button type="button" class="secondary-btn" data-cancel>إلغاء</button>
+                <button type="button" class="ghost-btn">إعادة جدولة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h2>التقييم والملاحظات</h2>
+              <span class="badge primary">مستمر</span>
+            </div>
+
+            <div class="review-box">
+              <label>التقييم</label>
+              <div class="rating-stars" data-rating>
+                <button type="button" class="star active" data-rate="1">★</button>
+                <button type="button" class="star active" data-rate="2">★</button>
+                <button type="button" class="star active" data-rate="3">★</button>
+                <button type="button" class="star" data-rate="4">★</button>
+                <button type="button" class="star" data-rate="5">★</button>
+              </div>
+
+              <label>ملاحظاتك</label>
+              <textarea placeholder="اكتب ملاحظاتك عن الخدمة..."></textarea>
+
+              <button type="button" class="primary-btn" data-save-review>حفظ التقييم</button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'patient') {
+        window.location.href = '/login/index.html';
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+
+    
+    </script>
+  </body>
+</html>

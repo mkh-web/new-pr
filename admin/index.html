@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة الإدارة</title>
+    <link rel="stylesheet" href="/admin/assets/admin.css" />
+  </head>
+  <body class="admin-page">
+    <div class="admin-shell" style="grid-template-columns: 1fr; min-height: 100vh; max-width: none;">
+      <main class="admin-main">
+        <header class="topbar">
+          <div>
+            <p>بوابة الإدارة</p>
+            <h1>اختيار صفحة الإدارة</h1>
+          </div>
+          <button type="button" class="nav-link logout-btn" id="logout-btn">تسجيل الخروج</button>
+        </header>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>الواجهات المتاحة</h2>
+            <span class="badge primary">9 صفحات</span>
+          </div>
+
+          <div class="card-grid" style="margin-top: 18px;">
+            <article class="info-card">
+              <h3>إدارة المستخدمين</h3>
+              <div class="list-stack">
+                <a href="/admin/users/add.html" class="nav-link"><span>إضافة مستخدم</span><span class="count">01</span></a>
+                <a href="/admin/users/edit.html" class="nav-link"><span>تعديل مستخدم</span><span class="count">02</span></a>
+                <a href="/admin/users/permissions.html" class="nav-link"><span>إدارة الصلاحيات</span><span class="count">03</span></a>
+              </div>
+            </article>
+
+            <article class="info-card">
+              <h3>إدارة العيادات</h3>
+              <div class="list-stack">
+                <a href="/admin/clinics/add.html" class="nav-link"><span>إضافة عيادة</span><span class="count">04</span></a>
+                <a href="/admin/clinics/edit.html" class="nav-link"><span>تعديل عيادة</span><span class="count">05</span></a>
+                <a href="/admin/clinics/details.html" class="nav-link"><span>تفاصيل العيادة</span><span class="count">06</span></a>
+              </div>
+            </article>
+
+            <article class="info-card">
+              <h3>محتوى النظام</h3>
+              <div class="list-stack">
+                <a href="/admin/notifications/index.html" class="nav-link"><span>الإشعارات</span><span class="count">07</span></a>
+                <a href="/admin/comments/index.html" class="nav-link"><span>التعليقات</span><span class="count">08</span></a>
+                <a href="/admin/reports/index.html" class="nav-link"><span>التقارير</span><span class="count">09</span></a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'admin') {
+        window.location.href = '/login/index.html';
+      }
+
+      const logoutBtn = document.getElementById('logout-btn');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      }
+    </script>
+  </body>
+</html>

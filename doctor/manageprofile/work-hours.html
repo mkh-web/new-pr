@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مواعيد العمل</title>
+    <link rel="stylesheet" href="../assets/doctor.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة الطبيب</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الطبيب</div>
+          <a class="nav-link" href="../dashboard/index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير والإحصاءات</span><span class="count">02</span></a>
+          <a class="nav-link active" href="index.html"><span>إدارة الملف الشخصي</span><span class="count">03</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>إدارة الملف الشخصي</p>
+            <h1>تحديث ساعات العمل</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">د</div>
+            <div>
+              <strong>د. طيب</strong>
+              <small>طبيب مختص</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>جدول الدوام</h2>
+            <span class="badge primary">أسبوعي</span>
+          </div>
+
+          <form>
+            <div class="form-grid">
+              <div class="field">
+                <label>اليوم</label>
+                <select>
+                  <option>السبت</option>
+                  <option>الأحد</option>
+                  <option>الاثنين</option>
+                  <option>الثلاثاء</option>
+                  <option>الأربعاء</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>العيادة</label>
+                <select>
+                  <option>عيادة النور</option>
+                  <option>مركز التميز</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>وقت البداية</label>
+                <input type="time" value="09:00" />
+              </div>
+              <div class="field">
+                <label>وقت النهاية</label>
+                <input type="time" value="13:00" />
+              </div>
+              <div class="field full">
+                <label>ملاحظات</label>
+                <textarea>مواعيد المتابعة والصحة العامة يتم استقبالها خلال هذه الفترة، مع إمكانية حجز وقت إضافي في الظهر.</textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="ghost-btn">إلغاء</button>
+              <button type="button" class="primary-btn">حفظ المواعيد</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

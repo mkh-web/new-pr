@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إدارة العيادة</title>
+    <link rel="stylesheet" href="assets/clinic.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>إدارة العيادة</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة العيادة</div>
+          <a class="nav-link active" href="index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link" href="reports/index.html"><span>التقارير والإحصاءات</span><span class="count">02</span></a>
+          <a class="nav-link" href="doctors/index.html"><span>إدارة الأطباء</span><span class="count">03</span></a>
+          <a class="nav-link" href="payments/index.html"><span>إدارة الدفع</span><span class="count">04</span></a>
+          <a class="nav-link" href="profile/index.html"><span>ملف العيادة</span><span class="count">05</span></a>
+          <a class="nav-link" href="bookings/index.html"><span>متابعة الحجوزات</span><span class="count">06</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>بوابة العيادة</p>
+            <h1>لوحة الإدارة العامة</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">ع</div>
+            <div>
+              <strong>عيادة النور</strong>
+              <small>إدارة العيادة</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="summary-grid">
+          <article class="summary-card blue">
+            <span>إجمالي الزيارات</span>
+            <strong>1,280</strong>
+            <div class="trend">+14% هذا الشهر</div>
+          </article>
+          <article class="summary-card green">
+            <span>الحجوزات المؤكدة</span>
+            <strong>432</strong>
+            <div class="trend">+8% الأسبوع الحالي</div>
+          </article>
+          <article class="summary-card orange">
+            <span>طلبات الانضمام</span>
+            <strong>18</strong>
+            <div class="trend">5 جديدة</div>
+          </article>
+          <article class="summary-card red">
+            <span>المدفوعات المتأخرة</span>
+            <strong>27</strong>
+            <div class="trend">4 تحتاج متابعة</div>
+          </article>
+        </section>
+
+        <section class="metrics-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>أداء العيادة</h2>
+              <span class="badge primary">هذا الأسبوع</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>زيادة في عدد الزيارات</strong>
+                  <div class="meta">بلغت الزيادة 18% مقارنة بالأسبوع الماضي</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>مواعيد اليوم</strong>
+                  <div class="meta">تم حجز 42 موعداً، من بينهم 12 متابعة</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>دفع إلكتروني</strong>
+                  <div class="meta">تمت معالجة 31 دفعة بنجاح</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>إحصائيات سريعة</h3>
+            </div>
+
+            <div class="list-stack">
+              <div class="mini-stat">
+                <span>أطباء النشطون</span>
+                <strong>14</strong>
+              </div>
+              <div class="mini-stat">
+                <span>معدل رضا المرضى</span>
+                <strong>94%</strong>
+              </div>
+              <div class="mini-stat">
+                <span>متوسط وقت الانتظار</span>
+                <strong>12 دقيقة</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+       
+      </main>
+    </div>
+
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'clinic') {
+        window.location.href = '/login/index.html';
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

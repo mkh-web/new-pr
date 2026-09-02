@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تعديل المعلومات الشخصية</title>
+    <link rel="stylesheet" href="../assets/patient.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة المريض</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المريض</div>
+          <a class="nav-link" href="../index.html"><span>العيادات</span><span class="count">01</span></a>
+          <a class="nav-link" href="../bookings/index.html"><span>إدارة الحجوزات الحالية</span><span class="count">02</span></a>
+          <a class="nav-link active" href="index.html"><span>إدارة الملف الشخصي</span><span class="count">03</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>إدارة الملف الشخصي</p>
+            <h1>تعديل المعلومات الشخصية</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">م</div>
+            <div>
+              <strong>محمد علي</strong>
+              <small>مريض</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>البيانات الشخصية</h2>
+            <span class="badge primary">محدث</span>
+          </div>
+
+          <form>
+            <div class="form-grid">
+              <div class="field">
+                <label>الاسم الكامل</label>
+                <input type="text" value="محمد علي" />
+              </div>
+              <div class="field">
+                <label>العمر</label>
+                <input type="text" value="29 سنة" />
+              </div>
+              <div class="field">
+                <label>رقم الهاتف</label>
+                <input type="text" value="0556622334" />
+              </div>
+              <div class="field">
+                <label>البريد الإلكتروني</label>
+                <input type="email" value="mohamed@gmail.com" />
+              </div>
+              <div class="field full">
+                <label>العنوان</label>
+                <textarea>حي النخيل، شارع الملك فيصل، الرياض</textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="ghost-btn">إلغاء</button>
+              <button type="button" class="primary-btn">حفظ التعديلات</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'patient') {
+        window.location.href = '/login/index.html';
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

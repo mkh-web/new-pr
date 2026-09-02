@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الإشعارات والتنبيهات</title>
+    <link rel="stylesheet" href="../assets/admin.css" />
+  </head>
+  <body class="admin-page">
+    <div class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div class="brand-text">
+            <small>Clinic Admin</small>
+            <strong>لوحة التحكم</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الرئيسية</div>
+          <a class="nav-link" href="../index.html"><span>لوحة الإدارة</span><span class="count">00</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة النظام</div>
+          <a class="nav-link" href="../users/add.html"><span>إضافة مستخدم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../users/edit.html"><span>تعديل مستخدم</span><span class="count">02</span></a>
+          <a class="nav-link" href="../users/permissions.html"><span>إدارة الصلاحيات</span><span class="count">03</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">العيادات</div>
+          <a class="nav-link" href="../clinics/add.html"><span>إضافة عيادة</span><span class="count">04</span></a>
+          <a class="nav-link" href="../clinics/edit.html"><span>تعديل عيادة</span><span class="count">05</span></a>
+          <a class="nav-link" href="../clinics/details.html"><span>تفاصيل العيادة</span><span class="count">06</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المحتوى</div>
+          <a class="nav-link active" href="index.html"><span>الإشعارات</span><span class="count">07</span></a>
+          <a class="nav-link" href="../comments/index.html"><span>التعليقات</span><span class="count">08</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير</span><span class="count">09</span></a>
+        </div>
+      </aside>
+
+      <main class="admin-main">
+        <header class="topbar">
+          <div>
+            <p>إدارة الإشعارات</p>
+            <h1>الإشعارات والتنبيهات</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-pill">
+              <div class="user-avatar">أ</div>
+              <div>
+                <strong>أحمد المقدم</strong>
+                <small>مدير النظام</small>
+              </div>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="two-col">
+          <div class="panel notification-form">
+            <div class="panel-header">
+              <h2>إرسال تنبيه جديد</h2>
+              <span class="badge neutral">مخصص لجميع الفئات</span>
+            </div>
+
+            <div class="field">
+              <label>عنوان التنبيه</label>
+              <input type="text" value="تحديث نظام الحجز" />
+            </div>
+            <div class="field">
+              <label>الفئة المستهدفة</label>
+              <select>
+                <option selected>المرضى</option>
+                <option>الأطباء</option>
+                <option>العيادات</option>
+                <option>الجميع</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>نص التنبيه</label>
+              <textarea>أصبح نظام الحجز متاحًا الآن مع تحديثات جديدة على واجهة إدارة المواعيد.</textarea>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="ghost-btn">مسودة</button>
+              <button type="button" class="primary-btn" data-toast="تم إرسال الإشعار بنجاح">إرسال</button>
+            </div>
+          </div>
+
+          <div class="panel alert-box">
+            <div class="panel-header">
+              <h3>آخر التنبيهات</h3>
+              <span class="badge success">فعال</span>
+            </div>
+            <div class="list-stack">
+              <div class="list-item">
+                <div>
+                  <strong>تحديث الحجز</strong>
+                  <small>إلى جميع المرضى</small>
+                </div>
+                <span class="badge primary">اليوم</span>
+              </div>
+              <div class="list-item">
+                <div>
+                  <strong>إبلاغ عن موعد جديد</strong>
+                  <small>إلى الأطباء</small>
+                </div>
+                <span class="badge neutral">أمس</span>
+              </div>
+              <div class="list-item">
+                <div>
+                  <strong>إغلاق العيادة</strong>
+                  <small>إلى العيادات</small>
+                </div>
+                <span class="badge warning">مساء</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="../assets/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>العيادات المتاحة</title>
+    <link rel="stylesheet" href="assets/patient.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة المريض</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المريض</div>
+          <a class="nav-link active" href="index.html"><span>العيادات</span><span class="count">01</span></a>
+          <a class="nav-link" href="bookings/index.html"><span>إدارة الحجوزات الحالية</span><span class="count">02</span></a>
+          <a class="nav-link" href="profile/index.html"><span>إدارة الملف الشخصي</span><span class="count">03</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>بوابة المريض</p>
+            <h1>لوحة المريض</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">م</div>
+            <div>
+              <strong>محمد علي</strong>
+              <small>مريض</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="section-stack">
+          <article class="panel">
+            <div class="panel-header">
+              <h2>العيادات المتاحة</h2>
+              <span class="badge primary">3 عيادات</span>
+            </div>
+
+            <div class="clinic-grid">
+              <div class="clinic-card">
+                <div class="clinic-top">
+                  <h3>عيادة النور</h3>
+                  <span class="badge success">متاح</span>
+                </div>
+                <p>عيادة حديثة متخصصة في الأسنان والفحوصات الروتينية والمتابعة بعد العلاج.</p>
+                <ul>
+                  <li>طب الأسنان</li>
+                  <li>الفحص</li>
+                  <li>المتابعة</li>
+                </ul>
+                <button type="button" class="primary-btn">حجز موعد</button>
+              </div>
+
+              <div class="clinic-card">
+                <div class="clinic-top">
+                  <h3>عيادة الأمل</h3>
+                  <span class="badge primary">مفتوح</span>
+                </div>
+                <p>تركز على الجلدية ورعاية الأسرة، مع خدمات الطوارئ السريعة وسهولة الحجز.</p>
+                <ul>
+                  <li>جلدية</li>
+                  <li>أسرة</li>
+                  <li>طوارئ</li>
+                </ul>
+                <button type="button" class="primary-btn">حجز موعد</button>
+              </div>
+
+              <div class="clinic-card">
+                <div class="clinic-top">
+                  <h3>عيادة الصحة</h3>
+                  <span class="badge warning">جديد</span>
+                </div>
+                <p>تقدم خدمات النساء والأطفال والتحاليل الطبية مع فريق متخصص في المتابعة.</p>
+                <ul>
+                  <li>نساء</li>
+                  <li>أطفال</li>
+                  <li>تحاليل</li>
+                </ul>
+                <button type="button" class="primary-btn">حجز موعد</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h2>الحجوزات الحالية</h2>
+              <span class="badge success">1 زيارة مجدولة</span>
+            </div>
+
+            <div class="booking-card">
+              <div class="booking-meta">
+                <div>
+                  <strong>عيادة النور</strong>
+                  <small>الأسنان • اليوم • 14:00</small>
+                </div>
+                <span class="status-pill warning">قيد التنفيذ</span>
+              </div>
+
+              <div class="booking-actions">
+                <button type="button" class="secondary-btn" data-cancel>إلغاء</button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'patient') {
+        window.location.href = '/login/index.html';
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+
+     
+     
+    </script>
+  </body>
+</html>

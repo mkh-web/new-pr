@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل العيادة</title>
+    <link rel="stylesheet" href="../assets/admin.css" />
+  </head>
+  <body class="admin-page">
+    <div class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div class="brand-text">
+            <small>Clinic Admin</small>
+            <strong>لوحة التحكم</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الرئيسية</div>
+          <a class="nav-link" href="../index.html"><span>لوحة الإدارة</span><span class="count">00</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة النظام</div>
+          <a class="nav-link" href="../users/add.html"><span>إضافة مستخدم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../users/edit.html"><span>تعديل مستخدم</span><span class="count">02</span></a>
+          <a class="nav-link" href="../users/permissions.html"><span>إدارة الصلاحيات</span><span class="count">03</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">العيادات</div>
+          <a class="nav-link" href="add.html"><span>إضافة عيادة</span><span class="count">04</span></a>
+          <a class="nav-link" href="edit.html"><span>تعديل عيادة</span><span class="count">05</span></a>
+          <a class="nav-link active" href="details.html"><span>تفاصيل العيادة</span><span class="count">06</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المحتوى</div>
+          <a class="nav-link" href="../notifications/index.html"><span>الإشعارات</span><span class="count">07</span></a>
+          <a class="nav-link" href="../comments/index.html"><span>التعليقات</span><span class="count">08</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير</span><span class="count">09</span></a>
+        </div>
+      </aside>
+
+      <main class="admin-main">
+        <header class="topbar">
+          <div>
+            <p>إدارة العيادات</p>
+            <h1>تفاصيل العيادة</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-pill">
+              <div class="user-avatar">أ</div>
+              <div>
+                <strong>أحمد المقدم</strong>
+                <small>مدير النظام</small>
+              </div>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="two-col">
+          <div class="panel hero-card">
+            <div class="panel-header">
+              <h2>عيادة النور</h2>
+              <span class="badge success">نشطة</span>
+            </div>
+
+            <div class="info-row">
+              <small>الموقع</small>
+              <strong>الرياض - حي النخيل</strong>
+            </div>
+            <div class="info-row">
+              <small>النوع</small>
+              <strong>عيادة عناية أولية</strong>
+            </div>
+            <div class="info-row">
+              <small>الوصف</small>
+              <strong>مركز طبي متكامل يوفر خدمات التشخيص والتقييم والموعد الطبي للمرضى من جميع الفئات.</strong>
+            </div>
+            <div class="pill-row">
+              <span class="tag">تجهيزات حديثة</span>
+              <span class="tag">أطباء مختصين</span>
+              <span class="tag">مواعيد متاحة</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>إحصائيات العيادة</h3>
+            </div>
+            <div class="bar-stack">
+              <div class="bar-row">
+                <span>المرضى</span>
+                <div class="bar"><span style="width: 78%;"></span></div>
+                <strong>78%</strong>
+              </div>
+              <div class="bar-row">
+                <span>الحجوزات</span>
+                <div class="bar"><span style="width: 64%;"></span></div>
+                <strong>64%</strong>
+              </div>
+              <div class="bar-row">
+                <span>التقييم</span>
+                <div class="bar"><span style="width: 90%;"></span></div>
+                <strong>90%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-grid" style="margin-top: 22px;">
+          <article class="info-card">
+            <h3>المدير</h3>
+            <div class="info-row">
+              <small>الاسم</small>
+              <strong>د. فهد لافي</strong>
+            </div>
+            <div class="info-row">
+              <small>الهاتف</small>
+              <strong>0557890123</strong>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <h3>الدوام</h3>
+            <div class="info-row">
+              <small>من</small>
+              <strong>09:00</strong>
+            </div>
+            <div class="info-row">
+              <small>إلى</small>
+              <strong>21:00</strong>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <h3>الحالة</h3>
+            <div class="info-row">
+              <small>الحالة الحالية</small>
+              <strong>قيد التشغيل</strong>
+            </div>
+            <div class="info-row">
+              <small>الملاحظات</small>
+              <strong>تحديثات تجميد المواسم</strong>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/admin.js"></script>
+  </body>
+</html>

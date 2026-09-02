@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تعديل عيادة</title>
+    <link rel="stylesheet" href="../assets/admin.css" />
+  </head>
+  <body class="admin-page">
+    <div class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div class="brand-text">
+            <small>Clinic Admin</small>
+            <strong>لوحة التحكم</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الرئيسية</div>
+          <a class="nav-link" href="../index.html"><span>لوحة الإدارة</span><span class="count">00</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة النظام</div>
+          <a class="nav-link" href="../users/add.html"><span>إضافة مستخدم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../users/edit.html"><span>تعديل مستخدم</span><span class="count">02</span></a>
+          <a class="nav-link" href="../users/permissions.html"><span>إدارة الصلاحيات</span><span class="count">03</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">العيادات</div>
+          <a class="nav-link" href="add.html"><span>إضافة عيادة</span><span class="count">04</span></a>
+          <a class="nav-link active" href="edit.html"><span>تعديل عيادة</span><span class="count">05</span></a>
+          <a class="nav-link" href="details.html"><span>تفاصيل العيادة</span><span class="count">06</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المحتوى</div>
+          <a class="nav-link" href="../notifications/index.html"><span>الإشعارات</span><span class="count">07</span></a>
+          <a class="nav-link" href="../comments/index.html"><span>التعليقات</span><span class="count">08</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير</span><span class="count">09</span></a>
+        </div>
+      </aside>
+
+      <main class="admin-main">
+        <header class="topbar">
+          <div>
+            <p>إدارة العيادات</p>
+            <h1>تعديل العيادة</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-pill">
+              <div class="user-avatar">أ</div>
+              <div>
+                <strong>أحمد المقدم</strong>
+                <small>مدير النظام</small>
+              </div>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>قائمة العيادات</h2>
+            <span class="badge warning">تحديث سريع</span>
+          </div>
+
+          <div class="table-wrap" style="margin-bottom: 18px;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>اسم العيادة</th>
+                  <th>المدينة</th>
+                  <th>الحالة</th>
+                  <th>التقييم</th>
+                  <th>الإجراء</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>عيادة النور</td>
+                  <td>الرياض</td>
+                  <td><span class="status-pill active">نشطة</span></td>
+                  <td>4.8</td>
+                  <td><button class="ghost-btn">تحديد</button></td>
+                </tr>
+                <tr>
+                  <td>عيادة المشرق</td>
+                  <td>جدة</td>
+                  <td><span class="status-pill pending">قيد التحديث</span></td>
+                  <td>4.5</td>
+                  <td><button class="ghost-btn">تحديد</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <form>
+            <div class="form-grid">
+              <div class="field">
+                <label>اسم العيادة</label>
+                <input type="text" value="عيادة النور" />
+              </div>
+              <div class="field">
+                <label>المدينة</label>
+                <input type="text" value="الرياض" />
+              </div>
+              <div class="field">
+                <label>الحالة</label>
+                <select>
+                  <option selected>نشطة</option>
+                  <option>قيد المراجعة</option>
+                  <option>موقفة</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>نوع الخدمة</label>
+                <select>
+                  <option selected>عناية أولية</option>
+                  <option>متخصص</option>
+                  <option>تحليلي</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label>العنوان</label>
+                <input type="text" value="البلدية، شارع الحمراء، مبنى 8" />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="ghost-btn">إلغاء</button>
+              <button type="button" class="primary-btn" data-toast="تم تحديث العيادة">حفظ التحديث</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="../assets/admin.js"></script>
+  </body>
+</html>

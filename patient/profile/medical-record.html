@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>السجل الطبي</title>
+    <link rel="stylesheet" href="../assets/patient.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة المريض</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المريض</div>
+          <a class="nav-link" href="../index.html"><span>العيادات</span><span class="count">01</span></a>
+          <a class="nav-link active" href="index.html"><span>إدارة الملف الشخصي</span><span class="count">02</span></a>
+          <a class="nav-link" href="../bookings/index.html"><span>إدارة الحجوزات الحالية</span><span class="count">03</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>إدارة الملف الشخصي</p>
+            <h1>السجل الطبي</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">م</div>
+            <div>
+              <strong>محمد علي</strong>
+              <small>مريض</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>تفاصيل السجل الطبي</h2>
+            <span class="badge primary">محدث</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label>الوزن</label>
+              <input type="text" value="72 كجم" />
+            </div>
+            <div class="field">
+              <label>الطول</label>
+              <input type="text" value="175 سم" />
+            </div>
+            <div class="field">
+              <label>فصيلة الدم</label>
+              <input type="text" value="A+" />
+            </div>
+            <div class="field">
+              <label>الحالة</label>
+              <input type="text" value="مستقر" />
+            </div>
+            <div class="field full">
+              <label>الأمراض المزمنة</label>
+              <textarea>لا يوجد تاريخ لأمراض مزمنة، تم رصد فشار خفيف في المراجعة السابقة.</textarea>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

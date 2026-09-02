@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إدارة الملف الشخصي</title>
+    <link rel="stylesheet" href="../assets/doctor.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة الطبيب</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الطبيب</div>
+          <a class="nav-link" href="../dashboard/index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../patients/index.html"><span>المرضى</span><span class="count">02</span></a>
+          <a class="nav-link" href="../requests/index.html"><span>الطلبات</span><span class="count">03</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير والإحصاءات</span><span class="count">04</span></a>
+          <a class="nav-link active" href="index.html"><span>إدارة الملف الشخصي</span><span class="count">05</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>الملف الشخصي</p>
+            <h1>إدارة الملف الشخصي</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">د</div>
+            <div>
+              <strong>د. طيب</strong>
+              <small>طبيب مختص</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="card-grid">
+          <article class="info-card">
+            <h3>إضافة معلومات الطبيب</h3>
+            <div class="list-stack">
+              <a href="add-info.html" class="nav-link"><span>إضافة المعلومات</span><span class="count">01</span></a>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <h3>مواعيد العمل</h3>
+            <div class="list-stack">
+              <a href="work-hours.html" class="nav-link"><span>تحديث ساعات العمل</span><span class="count">02</span></a>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'doctor') {
+        window.location.href = '/login/index.html';
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

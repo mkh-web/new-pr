@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الزيارات السابقة</title>
+    <link rel="stylesheet" href="../assets/patient.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة المريض</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المريض</div>
+          <a class="nav-link" href="../index.html"><span>العيادات</span><span class="count">01</span></a>
+          <a class="nav-link" href="../bookings/index.html"><span>إدارة الحجوزات الحالية</span><span class="count">02</span></a>
+          <a class="nav-link" href="index.html"><span>إدارة الملف الشخصي</span><span class="count">03</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>معلومات المريض</p>
+            <h1>الزيارات السابقة</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">م</div>
+            <div>
+              <strong>محمد علي</strong>
+              <small>مريض</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="section-stack">
+          <article class="panel">
+            <div class="panel-header">
+              <h2>سجل الزيارات</h2>
+              <span class="badge neutral">4 زيارات</span>
+            </div>
+
+            <div class="visit-list">
+              <div class="visit-item">
+                <div>
+                  <strong>عيادة النور • فحص روتيني</strong>
+                  <small>15 مايو 2026 • الطبيب: د. سارة أحمد</small>
+                </div>
+                <span class="status-pill success">مكتمل</span>
+              </div>
+
+              <div class="visit-item">
+                <div>
+                  <strong>عيادة الأمل • متابعة جلدية</strong>
+                  <small>02 أبريل 2026 • الطبيب: د. فهد ناصر</small>
+                </div>
+                <span class="status-pill success">مكتمل</span>
+              </div>
+
+              <div class="visit-item">
+                <div>
+                  <strong>عيادة الصحة • فحص عام</strong>
+                  <small>18 فبراير 2026 • الطبيب: د. ريم خالد</small>
+                </div>
+                <span class="status-pill success">مكتمل</span>
+              </div>
+
+              <div class="visit-item">
+                <div>
+                  <strong>عيادة النور • متابعة بعد العلاج</strong>
+                  <small>30 يناير 2026 • الطبيب: د. محمد تركي</small>
+                </div>
+                <span class="status-pill neutral">مغلق</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'patient') {
+        window.location.href = '/login/index.html';
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

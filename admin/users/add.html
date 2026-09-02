@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إضافة مستخدم</title>
+    <link rel="stylesheet" href="../assets/admin.css" />
+  </head>
+  <body class="admin-page">
+    <div class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div class="brand-text">
+            <small>Clinic Admin</small>
+            <strong>لوحة التحكم</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الرئيسية</div>
+          <a class="nav-link" href="../index.html"><span>لوحة الإدارة</span><span class="count">00</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة النظام</div>
+          <a class="nav-link active" href="add.html"><span>إضافة مستخدم</span><span class="count">01</span></a>
+          <a class="nav-link" href="edit.html"><span>تعديل مستخدم</span><span class="count">02</span></a>
+          <a class="nav-link" href="permissions.html"><span>إدارة الصلاحيات</span><span class="count">03</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">العيادات</div>
+          <a class="nav-link" href="../clinics/add.html"><span>إضافة عيادة</span><span class="count">04</span></a>
+          <a class="nav-link" href="../clinics/edit.html"><span>تعديل عيادة</span><span class="count">05</span></a>
+          <a class="nav-link" href="../clinics/details.html"><span>تفاصيل العيادة</span><span class="count">06</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المحتوى</div>
+          <a class="nav-link" href="../notifications/index.html"><span>الإشعارات</span><span class="count">07</span></a>
+          <a class="nav-link" href="../comments/index.html"><span>التعليقات</span><span class="count">08</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير</span><span class="count">09</span></a>
+        </div>
+      </aside>
+
+      <main class="admin-main">
+        <header class="topbar">
+          <div>
+            <p>إدارة المستخدمين</p>
+            <h1>إضافة مستخدم جديد</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-pill">
+              <div class="user-avatar">أ</div>
+              <div>
+                <strong>أحمد المقدم</strong>
+                <small>مدير النظام</small>
+              </div>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="summary-grid">
+          <article class="summary-card blue">
+            <span>إجمالي المستخدمين</span>
+            <strong>184</strong>
+            <div class="trend">+12% هذا الشهر</div>
+          </article>
+          <article class="summary-card green">
+            <span>الأطباء النشطون</span>
+            <strong>49</strong>
+            <div class="trend">+4% هذا الأسبوع</div>
+          </article>
+          <article class="summary-card orange">
+            <span>في الانتظار</span>
+            <strong>16</strong>
+            <div class="trend">6 تحتاج مراجعة</div>
+          </article>
+          <article class="summary-card red">
+            <span>مستخدمون غير نشطين</span>
+            <strong>12</strong>
+            <div class="trend">2 تم تعليقهم</div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>بيانات المستخدم</h2>
+            <span class="badge primary">مستخدم جديد</span>
+          </div>
+
+          <form>
+            <div class="form-grid">
+              <div class="field">
+                <label>الاسم الكامل</label>
+                <input type="text" value="سارة علي" />
+              </div>
+              <div class="field">
+                <label>البريد الإلكتروني</label>
+                <input type="email" value="sara@clinic.com" />
+              </div>
+              <div class="field">
+                <label>نوع الحساب</label>
+                <select>
+                  <option>دكتور</option>
+                  <option>إدارة</option>
+                  <option>مريض</option>
+                  <option>موظف</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>العيادة</label>
+                <select>
+                  <option>عيادة النور</option>
+                  <option>العيادة المتخصصة</option>
+                  <option>مركز التميز</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>رقم الهاتف</label>
+                <input type="text" value="0551234567" />
+              </div>
+              <div class="field">
+                <label>الحالة</label>
+                <select>
+                  <option>نشط</option>
+                  <option>قيد الانتظار</option>
+                  <option>معلق</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label>الملاحظات الداخلية</label>
+                <textarea>تعيين مسؤول قسم التحاليل، يحتاج صلاحيات مراجعة التقارير.</textarea>
+              </div>
+            </div>
+
+            <div class="panel-header" style="margin-top: 22px;">
+              <h3>الصلاحيات</h3>
+            </div>
+
+            <div class="pill-row">
+              <span class="tag">المرضى</span>
+              <span class="tag">العيادات</span>
+              <span class="tag">التقارير</span>
+              <span class="tag">الإشعارات</span>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="ghost-btn">إلغاء</button>
+              <button type="button" class="primary-btn" data-toast="تم حفظ المستخدم بنجاح">حفظ المستخدم</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="../assets/admin.js"></script>
+  </body>
+</html>

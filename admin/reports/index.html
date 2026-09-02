@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>التقارير الإحصائية</title>
+    <link rel="stylesheet" href="../assets/admin.css" />
+  </head>
+  <body class="admin-page">
+    <div class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div class="brand-text">
+            <small>Clinic Admin</small>
+            <strong>لوحة التحكم</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الرئيسية</div>
+          <a class="nav-link" href="../index.html"><span>لوحة الإدارة</span><span class="count">00</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة النظام</div>
+          <a class="nav-link" href="../users/add.html"><span>إضافة مستخدم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../users/edit.html"><span>تعديل مستخدم</span><span class="count">02</span></a>
+          <a class="nav-link" href="../users/permissions.html"><span>إدارة الصلاحيات</span><span class="count">03</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">العيادات</div>
+          <a class="nav-link" href="../clinics/add.html"><span>إضافة عيادة</span><span class="count">04</span></a>
+          <a class="nav-link" href="../clinics/edit.html"><span>تعديل عيادة</span><span class="count">05</span></a>
+          <a class="nav-link" href="../clinics/details.html"><span>تفاصيل العيادة</span><span class="count">06</span></a>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المحتوى</div>
+          <a class="nav-link" href="../notifications/index.html"><span>الإشعارات</span><span class="count">07</span></a>
+          <a class="nav-link" href="../comments/index.html"><span>التعليقات</span><span class="count">08</span></a>
+          <a class="nav-link active" href="index.html"><span>التقارير</span><span class="count">09</span></a>
+        </div>
+      </aside>
+
+      <main class="admin-main">
+        <header class="topbar">
+          <div>
+            <p>لوحة التحليلات</p>
+            <h1>التقارير الإحصائية</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="user-pill">
+              <div class="user-avatar">أ</div>
+              <div>
+                <strong>أحمد المقدم</strong>
+                <small>مدير النظام</small>
+              </div>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="summary-grid">
+          <article class="summary-card blue">
+            <span>إجمالي الحجوزات</span>
+            <strong>12.4K</strong>
+            <div class="trend">+18% هذا الشهر</div>
+          </article>
+          <article class="summary-card green">
+            <span>المرضى النشطون</span>
+            <strong>8.2K</strong>
+            <div class="trend">+10% هذا الأسبوع</div>
+          </article>
+          <article class="summary-card orange">
+            <span>التقييم العام</span>
+            <strong>4.8</strong>
+            <div class="trend">معدل ممتاز</div>
+          </article>
+          <article class="summary-card red">
+            <span>الاستفسارات</span>
+            <strong>840</strong>
+            <div class="trend">-3% هذا الشهر</div>
+          </article>
+        </section>
+
+        <section class="metrics-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>مؤشرات الأداء</h2>
+              <span class="badge primary">آخر 30 يوم</span>
+            </div>
+
+            <div class="bar-stack">
+              <div class="bar-row">
+                <span>العيادات</span>
+                <div class="bar"><span style="width: 82%;"></span></div>
+                <strong>82%</strong>
+              </div>
+              <div class="bar-row">
+                <span>الأطباء</span>
+                <div class="bar"><span style="width: 76%;"></span></div>
+                <strong>76%</strong>
+              </div>
+              <div class="bar-row">
+                <span>الحجوزات</span>
+                <div class="bar"><span style="width: 91%;"></span></div>
+                <strong>91%</strong>
+              </div>
+              <div class="bar-row">
+                <span>الرضا</span>
+                <div class="bar"><span style="width: 88%;"></span></div>
+                <strong>88%</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>النشاط اليومي</h3>
+              <span class="badge success">مباشر</span>
+            </div>
+            <div class="list-stack">
+              <div class="list-item">
+                <div>
+                  <strong>مواعيد اليوم</strong>
+                  <small>378 حجز</small>
+                </div>
+                <span class="badge neutral">+22%</span>
+              </div>
+              <div class="list-item">
+                <div>
+                  <strong>الدخول</strong>
+                  <small>6,240 زيارة</small>
+                </div>
+                <span class="badge primary">+9%</span>
+              </div>
+              <div class="list-item">
+                <div>
+                  <strong>الطلبات</strong>
+                  <small>420 طلب</small>
+                </div>
+                <span class="badge warning">+5%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/admin.js"></script>
+  </body>
+</html>

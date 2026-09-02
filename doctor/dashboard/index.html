@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة الدكتور</title>
+    <link rel="stylesheet" href="../assets/doctor.css" />
+  </head>
+  <body class="doctor-page">
+    <div class="doctor-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-mark">+</div>
+          <div>
+            <p class="eyebrow">Clinic Portal</p>
+            <h2>د. طيب</h2>
+          </div>
+        </div>
+
+        <nav class="side-nav">
+          <a class="nav-item active" href="index.html">لوحة التحكم</a>
+          <a class="nav-item" href="../patients/index.html">المرضى</a>
+          <a class="nav-item" href="../requests/index.html">الطلبات</a>
+          <a class="nav-item" href="../reports/index.html">التقارير</a>
+          <a class="nav-item" href="../manageprofile/index.html">إدارة الملف الشخصي</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">اليوم</p>
+            <h1>مواعيد اليوم</h1>
+          </div>
+          <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card blue">
+            <span>إجمالي اليوم</span>
+            <strong>4</strong>
+            <small>حالات</small>
+          </article>
+
+          <article class="stat-card green">
+            <span>مكتمل</span>
+            <strong>1</strong>
+            <small>حالات</small>
+          </article>
+
+          <article class="stat-card orange">
+            <span>قيد المراجعة</span>
+            <strong>2</strong>
+            <small>حالات</small>
+          </article>
+
+          <article class="stat-card red">
+            <span>لم يحضر</span>
+            <strong>1</strong>
+            <small>حالات</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="queue-panel">
+            <div class="panel-header">
+              <h3>قائمة المرضى</h3>
+              <span class="badge neutral">4 مريض</span>
+            </div>
+
+            <div class="patient-list">
+              <button class="patient-card selected" type="button">
+                <div class="card-top">
+                  <div class="patient-meta">
+                    <strong>سارة أحمد</strong>
+                    <span>09:30</span>
+                  </div>
+                  <span class="status-tag warning">قيد المراجعة</span>
+                </div>
+                <p>صداع مستمر ودوخة</p>
+              </button>
+
+              <button class="patient-card" type="button">
+                <div class="card-top">
+                  <div class="patient-meta">
+                    <strong>محمد علي</strong>
+                    <span>10:15</span>
+                  </div>
+                  <span class="status-tag success">مكتمل</span>
+                </div>
+                <p>ألم في الظهر</p>
+              </button>
+
+              <button class="patient-card" type="button">
+                <div class="card-top">
+                  <div class="patient-meta">
+                    <strong>لينا ناصر</strong>
+                    <span>11:00</span>
+                  </div>
+                  <span class="status-tag danger">لم يحضر</span>
+                </div>
+                <p>تعب وتوتر</p>
+              </button>
+
+              <button class="patient-card" type="button">
+                <div class="card-top">
+                  <div class="patient-meta">
+                    <strong>عبدالله حسن</strong>
+                    <span>12:00</span>
+                  </div>
+                  <span class="status-tag warning">قيد المراجعة</span>
+                </div>
+                <p>فحص دوري وقياس السكر</p>
+              </button>
+            </div>
+          </div>
+
+          <div class="detail-panel">
+            <div class="panel-header">
+              <h3>تفاصيل المريض</h3>
+              <span class="badge accent">قيد المراجعة</span>
+            </div>
+
+            <div class="patient-headline">
+              <div class="avatar large">س</div>
+              <div>
+                <h4>سارة أحمد</h4>
+                <p>34 سنة • أنثى</p>
+              </div>
+            </div>
+
+            <div class="detail-grid">
+              <div>
+                <label>الوقت</label>
+                <strong>09:30</strong>
+              </div>
+
+              <div>
+                <label>الشكاية</label>
+                <strong>صداع مستمر ودوخة</strong>
+              </div>
+
+              <div class="full-span">
+                <label>التاريخ المرضي</label>
+                <strong>مريض متكرر في متابعة ضغط الدم</strong>
+              </div>
+            </div>
+
+            <div class="notes-box">
+              <div class="notes-header">
+                <label for="patient-note">ملاحظات وتقرير الطبيب</label>
+
+                <label class="upload-btn">
+                  <input type="file" id="file-upload" hidden />
+                  <span>رفع ملف</span>
+                </label>
+              </div>
+
+              <textarea id="patient-note" rows="6">الضغط طبيعي، يوصى بمراجعة الصور الشعاعية في حالة استمرار الألم لمدة 72 ساعة.</textarea>
+              <div id="upload-file-name" class="upload-file-name">لا توجد ملفات مرفقة</div>
+            </div>
+
+            <div class="status-actions">
+              <button class="action-btn complete" data-status="مكتمل" type="button">مكتمل</button>
+              <button class="action-btn pending" data-status="قيد المراجعة" type="button">قيد المراجعة</button>
+              <button class="action-btn absent" data-status="لم يحضر" type="button">لم يحضر</button>
+              <button class="action-btn save" id="save-note-btn" type="button">حفظ الملاحظات</button>
+            </div>
+          </div>
+
+          <div class="requests-panel">
+            <div class="panel-header">
+              <h3>الطلبات الجديدة</h3>
+              <span class="badge neutral">3</span>
+            </div>
+
+            <div class="request-list">
+              <article class="request-card">
+                <div class="request-head">
+                  <div>
+                    <strong>ريم سلمان</strong>
+                    <small>استشارة جديدة</small>
+                  </div>
+                  <span>09:00</span>
+                </div>
+                <p>تساقط الشعر ودوخة خفيفة</p>
+                <div class="request-actions">
+                  <button class="request-btn accept" type="button">قبول</button>
+                  <button class="request-btn reject" type="button">رفض</button>
+                </div>
+              </article>
+
+              <article class="request-card">
+                <div class="request-head">
+                  <div>
+                    <strong>خالد يوسف</strong>
+                    <small>كشف متابعة</small>
+                  </div>
+                  <span>10:45</span>
+                </div>
+                <p>تقييم بعد العلاج</p>
+                <div class="request-actions">
+                  <button class="request-btn accept" type="button">قبول</button>
+                  <button class="request-btn reject" type="button">رفض</button>
+                </div>
+              </article>
+
+              <article class="request-card">
+                <div class="request-head">
+                  <div>
+                    <strong>هند عارف</strong>
+                    <small>استشارة جديدة</small>
+                  </div>
+                  <span>11:30</span>
+                </div>
+                <p>ألم في المعدة بعد الوجبات</p>
+                <div class="request-actions">
+                  <button class="request-btn accept" type="button">قبول</button>
+                  <button class="request-btn reject" type="button">رفض</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="dashboard.js"></script>
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'doctor') {
+        window.location.href = '/login/index.html';
+      }
+
+      const doctorLogout = document.getElementById('doctor-logout');
+      if (doctorLogout) {
+        doctorLogout.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

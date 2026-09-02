@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متابعة الحجوزات</title>
+    <link rel="stylesheet" href="../assets/clinic.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>إدارة العيادة</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة العيادة</div>
+          <a class="nav-link" href="../index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير والإحصاءات</span><span class="count">02</span></a>
+          <a class="nav-link" href="../doctors/index.html"><span>إدارة الأطباء</span><span class="count">03</span></a>
+          <a class="nav-link" href="../payments/index.html"><span>إدارة الدفع</span><span class="count">04</span></a>
+          <a class="nav-link" href="../profile/index.html"><span>ملف العيادة</span><span class="count">05</span></a>
+          <a class="nav-link active" href="index.html"><span>متابعة الحجوزات</span><span class="count">06</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>إدارة العيادة</p>
+            <h1>متابعة الحجوزات</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">ع</div>
+            <div>
+              <strong>عيادة النور</strong>
+              <small>إدارة العيادة</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="card-grid">
+          <article class="info-card">
+            <h3>إدارة الحجوزات</h3>
+            <div class="list-stack">
+              <a href="manual.html" class="nav-link"><span>إضافة حجز يدوي</span><span class="count">01</span></a>
+              <a href="cancel-confirm.html" class="nav-link"><span>إلغاء وتأكيد الحجوزات</span><span class="count">02</span></a>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'clinic') {
+        window.location.href = '/login/index.html';
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

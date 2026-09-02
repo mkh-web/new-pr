@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إضافة معلومات الطبيب</title>
+    <link rel="stylesheet" href="../assets/doctor.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة الطبيب</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الطبيب</div>
+          <a class="nav-link" href="../dashboard/index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير والإحصاءات</span><span class="count">02</span></a>
+          <a class="nav-link active" href="index.html"><span>إدارة الملف الشخصي</span><span class="count">03</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>إدارة الملف الشخصي</p>
+            <h1>إضافة معلومات الطبيب</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">د</div>
+            <div>
+              <strong>د. طيب</strong>
+              <small>طبيب مختص</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>البيانات الأساسية</h2>
+            <span class="badge primary">محدث</span>
+          </div>
+
+          <form>
+            <div class="form-grid">
+              <div class="field">
+                <label>الاسم الكامل</label>
+                <input type="text" value="د. طيب محمد" />
+              </div>
+              <div class="field">
+                <label>التخصص</label>
+                <input type="text" value="الطب العام" />
+              </div>
+              <div class="field">
+                <label>البريد الإلكتروني</label>
+                <input type="email" value="doctor@clinic.com" />
+              </div>
+              <div class="field">
+                <label>رقم الهاتف</label>
+                <input type="text" value="0551234567" />
+              </div>
+              <div class="field full">
+                <label>نبذة مختصرة</label>
+                <textarea>أخصائي في الرعاية الأولية، متابعة الأمراض المزمنة، وإدارة الحالات المتكررة مع متابعة دقيقة.</textarea>
+              </div>
+              <div class="field full">
+                <label>الشهادات</label>
+                <textarea>بكالوريوس الطب والجراحة، زمالة الرعاية الأولية، تدريب في متابعة الأمراض المزمنة.</textarea>
+              </div>
+            </div>
+
+            <div class="pill-row">
+              <span class="tag">الرعاية الأولية</span>
+              <span class="tag">متابعة الحالات المزمنة</span>
+              <span class="tag">فحوصات دورية</span>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="ghost-btn">إلغاء</button>
+              <button type="button" class="primary-btn">حفظ المعلومات</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

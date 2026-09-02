@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إضافة حجز يدوي</title>
+    <link rel="stylesheet" href="../assets/clinic.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>إدارة العيادة</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة العيادة</div>
+          <a class="nav-link" href="../index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير والإحصاءات</span><span class="count">02</span></a>
+          <a class="nav-link" href="../doctors/index.html"><span>إدارة الأطباء</span><span class="count">03</span></a>
+          <a class="nav-link" href="../payments/index.html"><span>إدارة الدفع</span><span class="count">04</span></a>
+          <a class="nav-link" href="../profile/index.html"><span>ملف العيادة</span><span class="count">05</span></a>
+          <a class="nav-link active" href="index.html"><span>متابعة الحجوزات</span><span class="count">06</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>متابعة الحجوزات</p>
+            <h1>إضافة حجز يدوي</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">ع</div>
+            <div>
+              <strong>عيادة النور</strong>
+              <small>إدارة العيادة</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>تفاصيل الحجز</h2>
+            <span class="badge primary">حجز جديد</span>
+          </div>
+
+          <form>
+            <div class="form-grid">
+              <div class="field">
+                <label>اسم المريض</label>
+                <input type="text" value="أحمد سالم" />
+              </div>
+              <div class="field">
+                <label>نوع الخدمة</label>
+                <select>
+                  <option>استشارة</option>
+                  <option>متابعة</option>
+                  <option>تحليل</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>التاريخ</label>
+                <input type="date" value="2026-09-05" />
+              </div>
+              <div class="field">
+                <label>الوقت</label>
+                <input type="time" value="10:30" />
+              </div>
+              <div class="field full">
+                <label>ملاحظات</label>
+                <textarea>مراجعة مرضية بعد فحص سابق، يوصى بحضور الدكتورة في نفس اليوم.</textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="ghost-btn">إلغاء</button>
+              <button type="button" class="primary-btn">حفظ الحجز</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

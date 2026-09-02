@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>التقارير والإحصاءات</title>
+    <link rel="stylesheet" href="../assets/clinic.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>إدارة العيادة</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة العيادة</div>
+          <a class="nav-link" href="../index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link active" href="index.html"><span>التقارير والإحصاءات</span><span class="count">02</span></a>
+          <a class="nav-link" href="../doctors/index.html"><span>إدارة الأطباء</span><span class="count">03</span></a>
+          <a class="nav-link" href="../payments/index.html"><span>إدارة الدفع</span><span class="count">04</span></a>
+          <a class="nav-link" href="../profile/index.html"><span>ملف العيادة</span><span class="count">05</span></a>
+          <a class="nav-link" href="../bookings/index.html"><span>متابعة الحجوزات</span><span class="count">06</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>إدارة العيادة</p>
+            <h1>التقارير والإحصاءات</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">ع</div>
+            <div>
+              <strong>عيادة النور</strong>
+              <small>إدارة العيادة</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="summary-grid">
+          <article class="summary-card blue">
+            <span>عدد الزيارات</span>
+            <strong>1,280</strong>
+            <div class="trend">+14% الشهر الحالي</div>
+          </article>
+          <article class="summary-card green">
+            <span>الحجوزات المكتملة</span>
+            <strong>980</strong>
+            <div class="trend">+11% هذا الأسبوع</div>
+          </article>
+          <article class="summary-card orange">
+            <span>الحجوزات المتوقفة</span>
+            <strong>141</strong>
+            <div class="trend">9 بحاجة متابعة</div>
+          </article>
+          <article class="summary-card red">
+            <span>الإلغاءات</span>
+            <strong>59</strong>
+            <div class="trend">4% من الحجم</div>
+          </article>
+        </section>
+
+        <section class="metrics-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>عدد الزيارات الشهرية</h2>
+              <span class="badge primary">2026</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>يناير</strong>
+                  <div class="meta">280 زيارة</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>فبراير</strong>
+                  <div class="meta">310 زيارة</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>مارس</strong>
+                  <div class="meta">350 زيارة</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>أبريل</strong>
+                  <div class="meta">340 زيارة</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>ملخص الأداء</h3>
+            </div>
+            <div class="list-stack">
+              <div class="mini-stat">
+                <span>متوسط الزيارات يومياً</span>
+                <strong>42</strong>
+              </div>
+              <div class="mini-stat">
+                <span>نسبة الإكمال</span>
+                <strong>76%</strong>
+              </div>
+              <div class="mini-stat">
+                <span>زوار جدد</span>
+                <strong>240</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'clinic') {
+        window.location.href = '/login/index.html';
+      }
+    </script>
+  </body>
+</html>

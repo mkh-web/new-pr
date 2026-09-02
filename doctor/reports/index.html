@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تقارير الطبيب</title>
+    <link rel="stylesheet" href="../assets/doctor.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة الطبيب</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">الطبيب</div>
+          <a class="nav-link" href="../dashboard/index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../patients/index.html"><span>المرضى</span><span class="count">02</span></a>
+          <a class="nav-link" href="../requests/index.html"><span>الطلبات</span><span class="count">03</span></a>
+          <a class="nav-link active" href="index.html"><span>التقارير والإحصاءات</span><span class="count">04</span></a>
+          <a class="nav-link" href="../manageprofile/index.html"><span>إدارة الملف الشخصي</span><span class="count">05</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>تقارير الطبيب</p>
+            <h1>الإحصاءات والتقارير</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">د</div>
+            <div>
+              <strong>د. طيب</strong>
+              <small>طبيب مختص</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="summary-grid">
+          <article class="summary-card blue">
+            <span>إجمالي المرضى</span>
+            <strong>248</strong>
+            <div class="trend">+12% هذا الشهر</div>
+          </article>
+          <article class="summary-card green">
+            <span>المراجعات المكتملة</span>
+            <strong>186</strong>
+            <div class="trend">+9% هذا الأسبوع</div>
+          </article>
+          <article class="summary-card orange">
+            <span>قيد الانتظار</span>
+            <strong>32</strong>
+            <div class="trend">6 حالات جديدة</div>
+          </article>
+          <article class="summary-card red">
+            <span>الغيابات</span>
+            <strong>14</strong>
+            <div class="trend">3 هذا الأسبوع</div>
+          </article>
+        </section>
+
+        <section class="metrics-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>عدد الزيارات</h2>
+              <span class="badge primary">30 يوم</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>السبت</strong>
+                  <div class="meta">22 زيارة</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>الأحد</strong>
+                  <div class="meta">19 زيارة</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>الاثنين</strong>
+                  <div class="meta">28 زيارة</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="dot"></span>
+                <div>
+                  <strong>الثلاثاء</strong>
+                  <div class="meta">31 زيارة</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>مؤشرات سريعة</h3>
+            </div>
+            <div class="list-stack">
+              <div class="mini-stat">
+                <span>معدل الزيارات اليومية</span>
+                <strong>24</strong>
+              </div>
+              <div class="mini-stat">
+                <span>نسبة الإنجاز</span>
+                <strong>76%</strong>
+              </div>
+              <div class="mini-stat">
+                <span>متوسط مدة الزيارة</span>
+                <strong>18 دقيقة</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'doctor') {
+        window.location.href = '/login/index.html';
+      }
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

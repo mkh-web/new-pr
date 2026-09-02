@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>العيادات</title>
+    <link rel="stylesheet" href="../assets/patient.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>لوحة المريض</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">المريض</div>
+          <a class="nav-link" href="../index.html"><span>العيادات</span><span class="count">01</span></a>
+          <a class="nav-link" href="../profile/index.html"><span>إدارة الملف الشخصي</span><span class="count">02</span></a>
+          <a class="nav-link" href="../bookings/index.html"><span>إدارة الحجوزات الحالية</span><span class="count">03</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>العيادات</p>
+            <h1>القائمة الرئيسية</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">م</div>
+            <div>
+              <strong>محمد علي</strong>
+              <small>مريض</small>
+            </div>
+            <button type="button" class="logout-button" data-logout>تسجيل الخروج</button>
+          </div>
+        </header>
+
+        <section class="card-grid">
+          <article class="info-card">
+            <h3>إعادة توجيه</h3>
+            <p>يتم تحويلك تلقائياً إلى صفحة العيادات.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      const currentUser = localStorage.getItem('clinic-user');
+      if (currentUser !== 'patient') {
+        window.location.href = '/login/index.html';
+      }
+
+      window.location.replace('../index.html');
+
+      document.querySelectorAll('[data-logout]').forEach((button) => {
+        button.addEventListener('click', () => {
+          localStorage.removeItem('clinic-user');
+          window.location.href = '/login/index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

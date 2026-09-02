@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مواعيد الطبيب</title>
+    <link rel="stylesheet" href="../assets/clinic.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">+</div>
+          <div>
+            <small>Clinic Portal</small>
+            <strong>إدارة العيادة</strong>
+          </div>
+        </div>
+
+        <div class="side-group">
+          <div class="side-label">إدارة العيادة</div>
+          <a class="nav-link" href="../index.html"><span>لوحة التحكم</span><span class="count">01</span></a>
+          <a class="nav-link" href="../reports/index.html"><span>التقارير والإحصاءات</span><span class="count">02</span></a>
+          <a class="nav-link active" href="index.html"><span>إدارة الأطباء</span><span class="count">03</span></a>
+          <a class="nav-link" href="../payments/index.html"><span>إدارة الدفع</span><span class="count">04</span></a>
+          <a class="nav-link" href="../profile/index.html"><span>ملف العيادة</span><span class="count">05</span></a>
+          <a class="nav-link" href="../bookings/index.html"><span>متابعة الحجوزات</span><span class="count">06</span></a>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p>إدارة الأطباء</p>
+            <h1>مواعيد الطبيب</h1>
+          </div>
+          <div class="user-pill">
+            <div class="user-avatar">ع</div>
+            <div>
+              <strong>عيادة النور</strong>
+              <small>إدارة العيادة</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>جدول المواعيد</h2>
+            <span class="badge neutral">حسب الطبيب</span>
+          </div>
+
+          <div class="field" style="max-width: 420px; margin-bottom: 20px;">
+            <label for="doctor-select">اختيار الطبيب</label>
+            <select id="doctor-select" name="doctor">
+              <option value="د. سارة أحمد">د. سارة أحمد</option>
+              <option value="د. فهد ناصر">د. فهد ناصر</option>
+              <option value="د. رنا محمد">د. رنا محمد</option>
+            </select>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>اليوم</th>
+                  <th>الوقت</th>
+                  <th>العيادة</th>
+                  <th>الحالة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <select name="day[]">
+                      <option>السبت</option>
+                      <option>الأحد</option>
+                      <option>الاثنين</option>
+                      <option>الثلاثاء</option>
+                      <option>الأربعاء</option>
+                      <option>الخميس</option>
+                      <option>الجمعة</option>
+                    </select>
+                  </td>
+                  <td><input type="text" name="time[]" value="09:00 - 13:00" /></td>
+                  <td><input type="text" name="clinic[]" value="عيادة النور" /></td>
+                  <td>
+                    <select name="status[]">
+                      <option selected>متاح</option>
+                      <option>محدود</option>
+                      <option>غير متاح</option>
+                    </select>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <select name="day[]">
+                      <option>السبت</option>
+                      <option selected>الأحد</option>
+                      <option>الاثنين</option>
+                      <option>الثلاثاء</option>
+                      <option>الأربعاء</option>
+                      <option>الخميس</option>
+                      <option>الجمعة</option>
+                    </select>
+                  </td>
+                  <td><input type="text" name="time[]" value="10:00 - 14:00" /></td>
+                  <td><input type="text" name="clinic[]" value="عيادة النور" /></td>
+                  <td>
+                    <select name="status[]">
+                      <option>متاح</option>
+                      <option selected>محدود</option>
+                      <option>غير متاح</option>
+                    </select>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <select name="day[]">
+                      <option>السبت</option>
+                      <option>الأحد</option>
+                      <option>الاثنين</option>
+                      <option selected>الثلاثاء</option>
+                      <option>الأربعاء</option>
+                      <option>الخميس</option>
+                      <option>الجمعة</option>
+                    </select>
+                  </td>
+                  <td><input type="text" name="time[]" value="11:00 - 15:00" /></td>
+                  <td><input type="text" name="clinic[]" value="مركز التميز" /></td>
+                  <td>
+                    <select name="status[]">
+                      <option selected>متاح</option>
+                      <option>محدود</option>
+                      <option>غير متاح</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="ghost-btn">إلغاء</button>
+            <button type="submit" class="primary-btn">حفظ جدول المواعيد</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+  </body>
+</html>
